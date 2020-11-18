@@ -1,0 +1,6 @@
+<FilesMatch "(\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp)|~)$>
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+ErrorDocument 404 http://localhost/Store-v2/404.php

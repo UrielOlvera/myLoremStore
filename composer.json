@@ -1,0 +1,20 @@
+{
+    "name": "mystore/store-online",
+    "description": "creacion de una tienda en linea",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Uriel Olvera",
+            "email": "u.alejandro23@gmail.com"
+        }
+    ],
+    "require": {
+        "stripe/stripe-php": "^7.63"
+    },
+    "autoload": {
+        "psr-4": {
+            "mystore\\": "src/"
+        }
+    }
+}
