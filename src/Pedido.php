@@ -13,10 +13,10 @@ class Pedido{
         ));
     }
     public function add($_params){
-        $query = "INSERT INTO `orders`(`costumer`, `total`, `date`) VALUES (:costumer,:total,:date)";
+        $query = "INSERT INTO `orders`(`customer`, `total`, `date`) VALUES (:customer,:total,:date)";
         $ans = $this->cn->prepare($query);
         $data = array(
-            ":costumer" => $_params['costumer'],
+            ":customer" => $_params['customer'],
             ":total" => $_params['total'],
             ":date" => $_params['date']
         );
@@ -41,7 +41,7 @@ class Pedido{
     }
     public function show(){
         $query = "SELECT o.id, firstName, lastName, email, total, date FROM orders o 
-        INNER JOIN costumers c ON o.costumer = c.id ORDER BY o.id DESC";
+        INNER JOIN customers c ON o.customer = c.id ORDER BY o.id DESC";
         $ans = $this->cn->prepare($query);
         if($ans->execute())
             return $ans->fetchAll();
@@ -52,7 +52,7 @@ class Pedido{
         $query = "SELECT
         o.id, firstName, lastName, email, total, date 
         FROM orders o 
-        INNER JOIN costumers c ON o.costumer = c.id WHERE o.id = :id";
+        INNER JOIN customers c ON o.customer = c.id WHERE o.id = :id";
         $data = array(
             ':id' => $id
         );
@@ -79,7 +79,7 @@ class Pedido{
     }
     public function showLatest(){
         $query = "SELECT o.id, firstName, lastName, email, total, date FROM orders o 
-        INNER JOIN costumers c ON o.costumer = c.id ORDER BY o.id DESC LIMIT 10";
+        INNER JOIN customers c ON o.customer = c.id ORDER BY o.id DESC LIMIT 10";
         $ans = $this->cn->prepare($query);
         if($ans->execute())
             return $ans->fetchAll();

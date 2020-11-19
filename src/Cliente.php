@@ -13,7 +13,7 @@ class Cliente{
         ));
     }
     public function add($_params){
-        $query = "INSERT INTO `costumers`(`firstName`, `lastName`, `email`, `phone`, `comentary`) VALUES (:firstName,:lastName,:email,:phone,:comentary)";
+        $query = "INSERT INTO `customers`(`firstName`, `lastName`, `email`, `phone`, `comentary`) VALUES (:firstName,:lastName,:email,:phone,:comentary)";
         $ans = $this->cn->prepare($query);
         $data = array(
             ":firstName" => $_params['firstName'],

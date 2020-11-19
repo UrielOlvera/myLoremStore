@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         $customer_id = $customer->add($_params);
         //agregar orden
         $_params = array(
-            'costumer' => $customer_id,
+            'customer' => $customer_id,
             'total' => makeTotal(),
             'date' => date('Y-m-d')
         );
