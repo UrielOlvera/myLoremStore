@@ -3,5 +3,5 @@
     Deny from all
     Satisfy All
 </FilesMatch>
-ErrorDocument 404 http://localhost/Store-v2/404.php
-ErrorDocument 403 http://localhost/Store-v2/403.php
+ErrorDocument 404 https://my-lorem-store.herokuapp.com/404.php
+ErrorDocument 403 https://my-lorem-store.herokuapp.com/403.php
