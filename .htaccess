@@ -4,3 +4,4 @@
     Satisfy All
 </FilesMatch>
 ErrorDocument 404 http://localhost/Store-v2/404.php
+ErrorDocument 403 http://localhost/Store-v2/403.php

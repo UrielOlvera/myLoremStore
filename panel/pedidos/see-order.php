@@ -8,7 +8,7 @@
     $detailsData = $order->showDetailsByID($id);
     ?>
     <div class="row">
-        <div class="col s12 m4 l4 card-panel teal darken-4 z-depth-3">
+        <div class="col s12 m4 l4 card-panel blue-grey darken-3 z-depth-3">
             <div class="card-content">
                 <div class="row">
                     <div class="input-filed col s6 m12 l12">
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="col s12 m8 l8">
-            <table class="highlight responsive-table">
+            <table class="highlight responsive-table grey lighten-5">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -64,7 +64,7 @@
                             $image = "../assets/img/articleImages/".$row['image'];
                             if(file_exists($image)){
                             ?>
-                            <img class="responsive-img" src="<?php echo $image ?>" style="max-width: 70px;">
+                            <img class="responsive-img image-table-sm" src="<?php echo $image ?>">
                             <?php } else {?>
                             <i>NO DISPONIBLE</i>
                             <?php } ?>
@@ -84,7 +84,7 @@
                 </tbody>
                 <tfoot>
                     <tr class="teal-text">
-                        <td class="right-align" style="font-weight: bold;" colspan="5">TOTAL</td>
+                        <td class="right-align bold-text" colspan="5">TOTAL</td>
                         <td>$ <?php echo $orderData['total']; ?> MXN</td>
                     </tr>
                 </tfoot>
@@ -93,10 +93,10 @@
     </div>
     <div class="row">
         <div class="col m6 l6">
-            <a class="btn left teal darken-4" href="?menu=orders">Back<i class="material-icons left">arrow_back</i></a>
+            <a class="btn left blue-grey darken-3" href="?menu=orders">Back<i class="material-icons left">arrow_back</i></a>
         </div>
         <div class="col m6 l6">
-            <a class="btn right blue-grey lighten-1" href="#" id="btnPrint">Print<i class="material-icons right">print</i></a>
+            <a class="btn right teal" href="#" id="btnPrint">Print<i class="material-icons right">print</i></a>
         </div>
     </div>
 </div>

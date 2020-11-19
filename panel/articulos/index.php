@@ -4,7 +4,7 @@
             <h2>Listado de articulos</h2>
         </div>
         <div class="col m3 l3">
-            <a class="cyan darken-4 waves-effect waves-light btn btn-block right" href="?menu=add-article">Add <i class="material-icons right">add</i></a>
+            <a class="blue-grey darken-3 waves-effect waves-light btn btn-block right" href="?menu=add-article">Add <i class="material-icons right">add</i></a>
         </div>
     </div>
     <div class="row">
@@ -40,7 +40,7 @@
                             $image = "../assets/img/articleImages/".$row['image'];
                             if(file_exists($image)){
                             ?>
-                                <img class="responsive-img" src="<?php echo $image ?>" style="max-width: 100px;">
+                                <img class="responsive-img image-table-md" src="<?php echo $image ?>">
                             <?php } else {?>
                                 <i>NO DISPONIBLE</i>
                             <?php } ?>

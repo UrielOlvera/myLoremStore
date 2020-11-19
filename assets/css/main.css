@@ -1,12 +1,89 @@
 nav{
     padding-left: 2em;
     padding-right: 2em;
+    margin-bottom: 2em;
 }
 .btn-block{
     width: 100%;
 }
+
 body{
-    background: #009688 ;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #607d8b , #009688 );  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #607d8b , #009688 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #b2dfdb ;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #cfd8dc , #b2dfdb );  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #cfd8dc , #b2dfdb ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+table{
+    background: #fafafa;
+}
+.bold-text{
+    font-weight: bold;
+}
+.image-table-sm{
+    width: 70px;
+}
+.image-table-md{
+    width: 100px;
+}
+.logo-long{
+    width: 100%;
+    height: 200px;
+    padding: 1em;
+}
+.text-dark{
+    color: #263238  ;
+}
+.sidenav{
+    background: #263238;
+}
+.sidenav li > a {
+    color: #fff;
+}
+.sidenav li > a:hover {
+    background-color: rgba(0, 0, 0, 0.20);
+}
+.sidenav .collapsible-header{
+    text-transform: uppercase;
+}
+.sidenav .collapsible-header:hover{
+    background-color: rgba(0, 0, 0, 0.20);
+}
+.sidenav .active > .collapsible-body{
+    background-color: #37474f;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.sidenav .collapsible-body:hover{
+    background-color: rgba(0, 0, 0, 0.20);
+}
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+ .StripeElement {
+    box-sizing: border-box;
+  
+    height: 40px;
+  
+    padding: 10px 12px;
+  
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+  
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+  
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+  
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+  
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }

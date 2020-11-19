@@ -24,7 +24,7 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
     //print_r($_SESSION['cart']);
 }
 ?>
-<div class="container">
+<div class="container grey lighten-4">
     <table class="highlight responsive-table">
         <thead>
             <tr>
@@ -101,9 +101,9 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
     if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
     ?>
         <div class="row">
-            <a class="waves-effect waves-light btn left teal darken-4" href="?menu=catalog">keep buying</a>
+            <a class="waves-effect waves-light btn left blue-grey darken-3" href="?menu=catalog">keep buying</a>
             <!-- abrir modal CHECKOUT -->
-            <a class="waves-effect waves-light btn right blue-grey lighten-1" href="?menu=complete-info">Go to checkout</a>
+            <a class="waves-effect waves-light btn right teal" href="?menu=complete-info">Go to checkout</a>
         </div>
     <?php } ?>
 </div>

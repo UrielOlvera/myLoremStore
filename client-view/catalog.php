@@ -9,7 +9,7 @@
             foreach($items as $row){
         ?>
             <div class="col s6 m4 l3" >
-                <div class="card">
+                <div class="card z-depth-3">
                     <div class="card-image" style="height: 13em;">
                         <?php 
                         $image_path =  "../assets/img/articleImages/".$row['image']; 
@@ -26,7 +26,7 @@
                         <span class="card-title"><?php echo $row['name'] ?></span>
                     </div>
                     <div class="card-action">
-                            <a href="?menu=cart&id=<?php echo $row['id'] ?>" class="waves-effect waves-light btn" style="width: 100%;"><i class="material-icons left">shopping_cart</i>Buy</a>
+                            <a href="?menu=cart&id=<?php echo $row['id'] ?>" class="waves-effect waves-light btn btn-block"><i class="material-icons left">shopping_cart</i>Buy</a>
                     </div>
                 </div>
             </div>
