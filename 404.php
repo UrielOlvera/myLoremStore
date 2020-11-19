@@ -10,7 +10,7 @@ body{
     <div class="card-panel center-align grey lighten-2">
         <h1>Oh! :(</h1>
         <h3>Page not found</h3>
-        <a class="waves-effect waves-light btn" href="welcome.php">To Home</a>
+        <a class="waves-effect waves-light btn" href="index.php">To Home</a>
     </div>
 </div>
 <?php include_once("layout/footer.php") ?>

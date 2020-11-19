@@ -6,7 +6,7 @@ $q = quantityArticles();
     <div class="container">
         <div class="nav-wrapper">
             <div class="row">
-                <a href="../welcome.php" class="brand-logoc left">
+                <a href="../index.php" class="brand-logoc left">
                     <img src="https://cdn.worldvectorlogo.com/logos/lorem-lorem-1.svg" height="50px"
                         style="padding-top: 10px;">
                 </a>
