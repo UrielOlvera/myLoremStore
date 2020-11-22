@@ -4,7 +4,7 @@
             <h2>Listado de articulos</h2>
         </div>
         <div class="col m3 l3">
-            <a class="blue-grey darken-3 waves-effect waves-light btn btn-block right" href="?menu=add-article">Add <i class="material-icons right">add</i></a>
+            <a class="blue-grey darken-3 waves-effect waves-light btn btn-block right" href="?menu=add-article">Add <i class="right fas fa-plus"></i></a>
         </div>
     </div>
     <div class="row">
@@ -46,10 +46,10 @@
                             <?php } ?>
                         </td>
                         <td>
-                            <a class="waves-effect waves-light btn-small btn-floating red" href="../panel/actions.php?id=<?php echo $row['id']; ?>"><i class="material-icons">delete</i></a>
+                            <a class="waves-effect waves-light btn-small btn-floating red" href="../panel/actions.php?id=<?php echo $row['id']; ?>"><i class="fas fa-trash"></i></a>
                         </td>
                         <td>
-                            <a class="waves-effect waves-light btn-small btn-floating" href="?menu=update-article&id=<?php echo $row['id']; ?>"><i class="material-icons">edit</i></a>
+                            <a class="waves-effect waves-light btn-small btn-floating" href="?menu=update-article&id=<?php echo $row['id']; ?>"><i class="fas fa-pen"></i></a>
                         </td>
                     </tr>
                     <?php

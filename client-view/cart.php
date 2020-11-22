@@ -66,8 +66,8 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
                             </td>
                             <td>$ <?php echo $subtotal ?> MXN</td>
                             <td>
-                                <button type="submit" class="waves-effect waves-light btn-small btn-floating"><i class="material-icons">refresh</i></button>
-                                <a class="waves-effect waves-light btn-small btn-floating red" href="../client-view/actions.php?delete=true&id=<?php echo $value['id'] ?>"><i class="material-icons ">delete</i></a>
+                                <button type="submit" class="waves-effect waves-light btn-small btn-floating"><i class="fas fa-redo"></i></button>
+                                <a class="waves-effect waves-light btn-small btn-floating red" href="../client-view/actions.php?delete=true&id=<?php echo $value['id'] ?>"><i class="fas fa-trash"></i></a>
                             </td>
                         </form>
                     </tr>

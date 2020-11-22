@@ -14,7 +14,7 @@
                             data-target='dropdown1'><?php echo $_SESSION['userLogged']['name']; ?><i
                                 class="material-icons right">arrow_drop_down</i></a></li>
                     <ul id='dropdown1' class='dropdown-content'>
-                        <li><a href='?menu=exit'>Exit <i class="material-icons right">exit_to_app</i></a></li>
+                        <li><a href='?menu=exit'>Exit <i class="fas fa-sign-out-alt"></i></a></li>
                         <!--<li><a href="#!">My Profile <i class="material-icons right">person</i></a></li>-->
                     </ul>
                 </ul>
@@ -25,7 +25,7 @@
                     <ul class='collapsible'>
                         <li>
                             <div class="collapsible-header"><?php echo $_SESSION['userLogged']['name']; ?></div>
-                            <div class="collapsible-body"><a class="teal-text" href='?menu=exit'>Exit</a><i class="material-icons teal-text">exit_to_app</i></div>
+                            <div class="collapsible-body"><a class="teal-text" href='?menu=exit'>Exit</a><i class="fas fa-sign-out-alt"></i></div>
                         </li>
                         <!--<li><a href="#!">My Profile <i class="material-icons right">person</i></a></li>-->
                     </ul>

@@ -26,7 +26,7 @@
                         <span class="card-title"><?php echo $row['name'] ?></span>
                     </div>
                     <div class="card-action">
-                            <a href="?menu=cart&id=<?php echo $row['id'] ?>" class="waves-effect waves-light btn btn-block"><i class="material-icons left">shopping_cart</i>Buy</a>
+                            <a href="?menu=cart&id=<?php echo $row['id'] ?>" class="waves-effect waves-light btn btn-block"><i class="left fas fa-shopping-cart"></i>Buy</a>
                     </div>
                 </div>
             </div>

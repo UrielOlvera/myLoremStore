@@ -24,8 +24,7 @@
                         </div>
                         <div class="row section">
                             <div class="col s12 m12 l12">
-                                <button class="waves-effect waves-light btn" type="submit" style="width: 100%;"><i
-                                        class="material-icons right">send</i>Login</button>
+                                <button class="waves-effect waves-light btn btn-block" type="submit"><i class="right fas fa-paper-plane"></i>Login</button>
                             </div>
                         </div>
                     </div>

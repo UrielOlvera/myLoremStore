@@ -32,8 +32,7 @@
                         <td><?php echo $row['date']; ?></td>
                         <td>
                             <a class="waves-effect waves-light btn-small btn-floating"
-                                href="?menu=see-order&id=<?php echo $row['id']; ?>"><i
-                                    class="material-icons">visibility</i></a>
+                                href="?menu=see-order&id=<?php echo $row['id']; ?>"><i class="fas fa-eye"></i></a>
                         </td>
                     </tr>
                     <?php

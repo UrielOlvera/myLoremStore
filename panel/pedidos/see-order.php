@@ -93,10 +93,10 @@
     </div>
     <div class="row">
         <div class="col m6 l6">
-            <a class="btn left blue-grey darken-3" href="?menu=orders">Back<i class="material-icons left">arrow_back</i></a>
+            <a class="btn left blue-grey darken-3" href="?menu=orders">Back<i class="left fas fa-chevron-left"></i></a>
         </div>
         <div class="col m6 l6">
-            <a class="btn right teal" href="#" id="btnPrint">Print<i class="material-icons right">print</i></a>
+            <a class="btn right teal" href="#" id="btnPrint">Print<i class="right fas fa-print"></i></a>
         </div>
     </div>
 </div>

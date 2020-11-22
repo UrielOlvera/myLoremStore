@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <button type="submit" class="waves-effect waves-light btn btn-block">
-                            Send<i class="material-icons right">send</i>
+                            Send<i class="right fas fa-paper-plane"></i>
                         </button>
                     </div>
                 </form>
