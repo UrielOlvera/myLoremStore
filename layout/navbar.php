@@ -11,8 +11,7 @@
                     <li><a href="?menu=dashboard">Dashboard</a></li>
                     <li><a href="?menu=orders">Orders</a></li>
                     <li><a href="#" class="dropdown-trigger"
-                            data-target='dropdown1'><?php echo $_SESSION['userLogged']['name']; ?><i
-                                class="material-icons right">arrow_drop_down</i></a></li>
+                            data-target='dropdown1'><?php echo $_SESSION['userLogged']['name']; ?><i class="right fas fa-sort-down"></i></a></li>
                     <ul id='dropdown1' class='dropdown-content'>
                         <li><a href='?menu=exit'>Exit <i class="fas fa-sign-out-alt"></i></a></li>
                         <!--<li><a href="#!">My Profile <i class="material-icons right">person</i></a></li>-->
@@ -34,7 +33,7 @@
                     <li><a href="?menu=dashboard">Dashboard</a></li>
                     <li><a href="?menu=orders">Orders</a></li>
                 </ul>
-                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             </div>
         </div>
     </div>

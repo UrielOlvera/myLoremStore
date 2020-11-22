@@ -30,7 +30,7 @@ $q = quantityArticles();
                         </a>
                     </li>
                 </ul>
-                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             </div>
         </div>
     </div>

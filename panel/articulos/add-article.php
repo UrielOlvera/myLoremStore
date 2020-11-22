@@ -69,7 +69,7 @@
                             <div class="input-field col s6">
                                 <a class="white-text waves-effect waves-light btn btn-block right teal">
                                     <input class="white-text" name="action" value="Add" type="submit">
-                                    <i class="material-icons right">send</i>
+                                    <i class="right fas fa-paper-plane"></i>
                                 </a>
                             </div>
                         </div>
