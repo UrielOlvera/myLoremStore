@@ -22,10 +22,17 @@ switch ($_GET['menu']) {
     case 'orders':
         require_once('../panel/pedidos/index.php');
         break;
+    case 'log':
+        require_once('../src/log/log-view.php');
+        break;
     case 'exit':
+        require_once "../src/log/logger.php";
+        $tinit = microtime(true);
+        $msg = "user ".$_SESSION['userLogged']['name']." has log out";
         header('Location: ../panel/login.php');
         $_SESSION['userLogged'] = array();
-        die();
+        $tfinish = microtime(true);
+        logger($msg, $tinit, $tfinish);
         break;
     default:
         header('Location: ../404.php');

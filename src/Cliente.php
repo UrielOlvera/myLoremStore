@@ -1,6 +1,6 @@
 <?php
 namespace mystore;
-
+require_once "log/logger.php";
 class Cliente{
     private $config;
     private $cn = null;
@@ -13,6 +13,8 @@ class Cliente{
         ));
     }
     public function add($_params){
+        $tinit = microtime(true);
+        $msg = "customer added to the database";
         $query = "INSERT INTO `customers`(`firstName`, `lastName`, `email`, `phone`, `comentary`) VALUES (:firstName,:lastName,:email,:phone,:comentary)";
         $ans = $this->cn->prepare($query);
         $data = array(
@@ -22,9 +24,11 @@ class Cliente{
             ":phone" => $_params['phone'],
             ":comentary" => $_params['comentary']
         );
-        if($ans->execute($data))
+        if($ans->execute($data)){
+            $tfinish = microtime(true);
+            logger($msg, $tinit, $tfinish);
             return $this->cn->lastInsertId();
-
+        }
         return false;
     }
 }

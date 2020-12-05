@@ -3,6 +3,18 @@ nav{
     padding-right: 2em;
     margin-bottom: 2em;
 }
+
+.log-panel{
+    background: #212121 ;
+    height: 600px;
+    padding: 1em;
+    margin: 1em;
+    overflow: scroll;
+    font-family: 'Consolas', monospace;
+    line-height: 0px;
+    color: #fafafa;
+}
+
 .btn-block{
     width: 100%;
 }
@@ -56,6 +68,7 @@ table{
 .sidenav .collapsible-body:hover{
     background-color: rgba(0, 0, 0, 0.20);
 }
+
 /**
  * The CSS shown here will not be introduced in the Quickstart guide, but shows
  * how you can use CSS to style your Element's container.

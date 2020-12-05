@@ -17,12 +17,12 @@ if(isset($_GET['id']) || is_numeric($_GET['id'])){
 ?>
 <div class="container" id="main">
     <div class="row">
-        <div class="col m3 l3"></div>
-        <div class="col s12 m6 l6">
-            <div class="card z-depth-3">
+        <div class="col m2"></div>
+        <div class="col s12 m8">
+            <div class="card blue-grey darken-3 z-depth-3">
                 <form action="../panel/actions.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $article_info['id'] ?>">
-                    <div class="card-content">
+                    <div class="card-content white-text">
                         <div class="card-title center-align">
                             <h4>Update Article</h4>
                         </div>
@@ -30,20 +30,20 @@ if(isset($_GET['id']) || is_numeric($_GET['id'])){
                             <div class="col s12 m12 l12">
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input value="<?php echo $article_info['name'] ?>" id="name" name="name" type="text" class="validate" required>
+                                        <input value="<?php echo $article_info['name'] ?>" id="name" name="name" type="text" class="white-text validate" required>
                                         <label for="name">Name</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <textarea class="materialize-textarea validate" name="description"
+                                        <textarea class="white-text materialize-textarea validate" name="description"
                                             id="description" cols="30" rows="10" required><?php echo $article_info['description'] ?></textarea>
                                         <label for="description">Description</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
-                                        <input value="<?php echo $article_info['unitPrice'] ?>" id="price" name="price" type="text" class="validate" placeholder="$"
+                                        <input value="<?php echo $article_info['unitPrice'] ?>" id="price" name="price" type="text" class="white-text validate" placeholder="$"
                                             required>
                                         <label for="price">Price</label>
                                     </div>
@@ -66,7 +66,7 @@ if(isset($_GET['id']) || is_numeric($_GET['id'])){
                                 </div>
                                 <div class="row">
                                     <div class="file-field input-field col s12">
-                                        <div class="btn blue-grey lighten-1">
+                                        <div class="btn teal accent-1 text-dark">
                                             <span>Image</span>
                                             <input type="file" id="imagebtn" name="imagebtn">
                                         </div>
@@ -82,13 +82,13 @@ if(isset($_GET['id']) || is_numeric($_GET['id'])){
                     <div class="card-action">
                         <div class="row">
                             <div class="input-field col s6">
-                                <a class="teal darken-4 waves-effect waves-light btn btn-block"
+                                <a class="blue-grey ligthen-3 waves-effect waves-light btn btn-block"
                                     href="?menu=articles">Cancel</a>
                             </div>
                             <div class="input-field col s6">
-                                <a class="white-text waves-effect waves-light btn btn-block right">
+                                <a class="white-text waves-effect waves-light btn btn-block right teal">
                                     <input name="action" value="Update" type="submit">
-                                    <i class="material-icons right">send</i>
+                                    <i class="right fas fa-paper-plane"></i>
                                 </a>
                             </div>
                         </div>
@@ -96,6 +96,6 @@ if(isset($_GET['id']) || is_numeric($_GET['id'])){
                 </form>
             </div>
         </div>
-        <div class="col m3 l3"></div>
+        <div class="col m2"></div>
     </div>
 </div>

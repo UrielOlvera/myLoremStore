@@ -1,0 +1,28 @@
+graficas ->     in panel
+                movimiento de los productos (existencias)
+                monto de las ventas general (acumulado total)
+                monto de las ventas particulares (por producto)
+
+panel log ->    in panel
+                tiempos de todas las operaciones
+                - proceso de transaccion de pago 
+                  (desde seteo hasta notificacion de correo)
+                - coneccion DB (consultas)
+
+correo ->       diseño del formato del correo 
+                notificacion de "pago exitoso"
+
+reportes ->     diseño del formato pdf de los reportes
+                - detalles de orden
+
+doc ->          documentacion del proyecto 
+                - modelo
+                - operaciones
+                - funciones
+                - casos de uso
+                - servicios
+                - API's     
+
+OTROS:
+        > reorganizacion de las rutas y layout
+        > update-article actualizar imagen

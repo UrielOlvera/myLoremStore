@@ -1,5 +1,7 @@
 <?php
 require '../vendor/autoload.php';
+
+
 if(!isset($_SESSION['cart']))
     session_start();
 $articulo = new mystore\Articulo;

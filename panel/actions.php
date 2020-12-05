@@ -2,12 +2,20 @@
 require '../vendor/autoload.php';
 
 $articulo = new mystore\Articulo;
+if(!isset($_SESSION['msgLog']))
+    session_start();
 
 if($_SERVER['REQUEST_METHOD']==='GET'){
     $id = $_GET['id'];
 
     $rpt = $articulo -> delete($id);
     if($rpt){
+        $_SESSION['msgLog'] = syslog(LOG_INFO, "Consulta de articulos");
+        ?>
+        <script>
+            console.log(<?php echo $_SESSION['msgLog']; ?>)
+        </script>
+        <?php
         header('Location: ../layout/admin-session-started.php?menu=articles');
     }else{
         echo 'Error al eliminar un articulo';
@@ -17,6 +25,7 @@ if($_SERVER['REQUEST_METHOD']==='GET'){
 if($_SERVER['REQUEST_METHOD']==='POST'){
     //ADD
     if($_POST['action']==='Add'){
+        //$_SESSION['msgLog'] = 'add article';            //mensaje add article para log
         if(empty($_POST['name']))
             exit('Completar Nombre');
 
@@ -44,6 +53,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         );
         $rpt = $articulo -> add($_params);
         if($rpt){
+            
             header('Location: ../layout/admin-session-started.php?menu=articles');
         }else{
             echo 'Error al registrar un articulo';

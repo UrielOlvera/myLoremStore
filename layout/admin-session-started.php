@@ -8,7 +8,6 @@ if(!isset($_SESSION['userLogged']) OR empty($_SESSION['userLogged'])){
 ?>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <?php include_once("navbar.php") ?>
-<div class="container" id="main">
+<?php require_once('../router/admin-router.php'); ?>
 
-</div>
 <?php include_once("footer.php") ?>

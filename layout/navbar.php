@@ -7,6 +7,7 @@
                         style="padding-top: 10px;">
                 </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="?menu=log">LOG</a></li>
                     <li><a href="?menu=articles">Articles</a></li>
                     <li><a href="?menu=dashboard">Dashboard</a></li>
                     <li><a href="?menu=orders">Orders</a></li>
@@ -29,6 +30,7 @@
                         <!--<li><a href="#!">My Profile <i class="material-icons right">person</i></a></li>-->
                     </ul>
                     <li></li>
+                    <li><a href="?menu=log">LOG</a></li>
                     <li><a href="?menu=articles">Articles</a></li>
                     <li><a href="?menu=dashboard">Dashboard</a></li>
                     <li><a href="?menu=orders">Orders</a></li>
@@ -38,4 +40,3 @@
         </div>
     </div>
 </nav>
-<?php require_once('../router/admin-router.php'); ?>

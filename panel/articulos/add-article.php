@@ -24,10 +24,14 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="input-field col s12">
+                                    <div class="input-field col s12 m6">
                                         <input id="price" name="price" type="text" class="white-text validate" placeholder="$"
                                             required>
                                         <label for="price">Price</label>
+                                    </div>
+                                    <div class="input-filed col s12 m6">
+                                        <input id="existences" name="existences" type="text" class="white-text validate" required>
+                                        <label for="existences">Existences</label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -45,6 +49,7 @@
                                         </select>
                                         <label>Category</label>
                                     </div>
+                                    
                                 </div>
                                 <div class="row">
                                     <div class="file-field input-field col s12">

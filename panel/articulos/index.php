@@ -1,4 +1,5 @@
 <div class="container" id="main">
+    <?php echo __DIR__; ?>
     <div class="row" style="display: flex; align-items: center;">
         <div class="col s12 m9 l9">
             <h2>Listado de articulos</h2>

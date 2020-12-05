@@ -1,6 +1,6 @@
 <?php
 namespace mystore;
-
+require_once "log/logger.php";
 class Usuario{
     private $config;
     private $cn = null;
@@ -13,6 +13,8 @@ class Usuario{
         ));
     }
     public function login($name, $pass){
+        $tinit = microtime(true);
+        $msg = "user $name has logged in";
         $query = "SELECT name FROM `users` WHERE `name`=:name AND `clv` = :pass";
         $ans = $this->cn->prepare($query);
         
@@ -21,9 +23,11 @@ class Usuario{
             ":pass" => $pass
         );
 
-        if($ans->execute($data))
+        if($ans->execute($data)){
+            $tfinish = microtime(true);
+            logger($msg, $tinit, $tfinish);
             return $ans->fetch();
-
+        }
         return false;
     }
 }
