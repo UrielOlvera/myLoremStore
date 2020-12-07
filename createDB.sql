@@ -5,8 +5,9 @@ create table article(
     image varchar(100) not null,
     unitPrice decimal(10,0) not null,
     category int(10) not null,
-    status int(10) not null DEFAULT 1,
-    existences int(10) DEFAULT 1
+    existences int(10) DEFAULT 5,
+    reorder int(10) DEFAULT 5,
+    sold int(10) not null
 );
 
 create table categories(

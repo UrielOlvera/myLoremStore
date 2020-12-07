@@ -1,5 +1,4 @@
 <div class="container" id="main">
-    <?php echo __DIR__; ?>
     <div class="row" style="display: flex; align-items: center;">
         <div class="col s12 m9 l9">
             <h2>Listado de articulos</h2>
@@ -18,6 +17,7 @@
                         <th>Category</th>
                         <th>UnitPrice</th>
                         <th class="center-alaign">Image</th>
+                        <th>Existences</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -46,6 +46,7 @@
                                 <i>NO DISPONIBLE</i>
                             <?php } ?>
                         </td>
+                        <td><?php echo $row['existences']; ?></td>
                         <td>
                             <a class="waves-effect waves-light btn-small btn-floating red" href="../panel/actions.php?id=<?php echo $row['id']; ?>"><i class="fas fa-trash"></i></a>
                         </td>

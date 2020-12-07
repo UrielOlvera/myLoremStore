@@ -14,6 +14,7 @@
                         <th>order</th>
                         <th>total</th>
                         <th>date</th>
+                        <th>status</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -21,6 +22,11 @@
                     <?php
                         require '../vendor/autoload.php';
                         $pedido = new mystore\Pedido;
+                        $status = array(
+                            '1' => 'Paid',
+                            '2' => 'Delivered',
+                            '3' => 'Returned'
+                        );
                         $items = $pedido->show();
                         $quantity_items = count($items);
                         if($quantity_items > 0) {
@@ -34,6 +40,7 @@
                         <td><?php echo $row['id']; ?></td>
                         <td>$ <?php echo $row['total']; ?> MXN</td>
                         <td><?php echo $row['date']; ?></td>
+                        <th><?php echo $status[$row['status']]; ?></th>
                         <td>
                             <a class="waves-effect waves-light btn-small btn-floating"
                                 href="?menu=see-order&id=<?php echo $row['id']; ?>"><i class="fas fa-eye"></i></a>

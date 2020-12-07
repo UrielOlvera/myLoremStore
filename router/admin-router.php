@@ -25,6 +25,9 @@ switch ($_GET['menu']) {
     case 'log':
         require_once('../src/log/log-view.php');
         break;
+    case 'statistics':
+        require_once('../panel/statistics/index.php');
+        break;
     case 'exit':
         require_once "../src/log/logger.php";
         $tinit = microtime(true);

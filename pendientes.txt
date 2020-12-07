@@ -2,8 +2,12 @@ graficas ->     in panel
                 movimiento de los productos (existencias)
                 monto de las ventas general (acumulado total)
                 monto de las ventas particulares (por producto)
+                
+para graph ->   panel de acciones en la seccion de ver orden 
+                - control del status (1: pagado, 2: entregado, 3: devuelto)
+                puntos de reorden de articulos 
 
-panel log ->    in panel
+OK panel log ->    in panel
                 tiempos de todas las operaciones
                 - proceso de transaccion de pago 
                   (desde seteo hasta notificacion de correo)
@@ -22,6 +26,7 @@ doc ->          documentacion del proyecto
                 - casos de uso
                 - servicios
                 - API's     
+
 
 OTROS:
         > reorganizacion de las rutas y layout

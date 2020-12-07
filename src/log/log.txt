@@ -29,3 +29,18 @@
 05-12-20	3:50:51 pm CET	0.064 s.	user admin has logged in
 05-12-20	3:50:51 pm CET	0.065 s.	the last 10 orders have been required
 05-12-20	4:11:05 pm CET	0.066 s.	all articles have been required
+05-12-20	7:47:21 pm CET	0.068 s.	all orders have been required
+05-12-20	7:51:34 pm CET	0.069 s.	all orders have been required
+05-12-20	8:05:31 pm CET	0.067 s.	all orders have been required
+05-12-20	9:02:21 pm CET	0.065 s.	all orders have been required
+05-12-20	9:03:31 pm CET	19.512 s.	all orders have been required
+05-12-20	9:04:21 pm CET	0.065 s.	all orders have been required
+05-12-20	9:17:21 pm CET	0.065 s.	all orders have been required
+05-12-20	9:38:14 pm CET	0.064 s.	all orders have been required
+05-12-20	9:42:18 pm CET	0.067 s.	all articles have been required
+05-12-20	9:42:30 pm CET	0.066 s.	all articles have been required
+05-12-20	9:42:53 pm CET	0.064 s.	all categories have been required
+05-12-20	9:42:57 pm CET	0.066 s.	all articles have been required
+05-12-20	9:43:01 pm CET	0.066 s.	all articles have been required
+05-12-20	9:53:55 pm CET	0.065 s.	all articles have been required
+05-12-20	9:54:56 pm CET	0.066 s.	all articles have been required

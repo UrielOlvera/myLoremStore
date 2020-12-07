@@ -16,14 +16,15 @@ class Articulo{
     public function add($_params){
         $tinit = microtime(true);
         $msg = "article added to the database";
-        $query = "INSERT INTO `article`(`name`, `description`, `image`, `unitPrice`, `category`) VALUES (:name,:description,:image,:unitPrice,:category)";
+        $query = "INSERT INTO `article`(`name`, `description`, `image`, `unitPrice`, `category`,`existences`) VALUES (:name,:description,:image,:unitPrice,:category,:existences)";
         $ans = $this->cn->prepare($query);
         $data = array(
             ":name" => $_params['name'],
             ":description" => $_params['description'],
             ":image" => $_params['image'],
             ":unitPrice" => $_params['unitPrice'],
-            ":category" => $_params['category']
+            ":category" => $_params['category'],
+            ":existences" => $_params['existences']
         );
         if($ans->execute($data)){
             $tfinish = microtime(true);
@@ -35,7 +36,7 @@ class Articulo{
     public function update($_params){
         $tinit = microtime(true);
         $msg = "updated article in the database";
-        $query = "UPDATE `article` SET `name`=:name,`description`=:description,`image`=:image,`unitPrice`=:unitPrice,`category`=:category WHERE `id`=:id";
+        $query = "UPDATE `article` SET `name`=:name,`description`=:description,`image`=:image,`unitPrice`=:unitPrice,`category`=:category,`existences`=:existences WHERE `id`=:id";
         $ans = $this->cn->prepare($query);
         $data = array(
             ":name" => $_params['name'],
@@ -43,7 +44,8 @@ class Articulo{
             ":image" => $_params['image'],
             ":unitPrice" => $_params['unitPrice'],
             ":category" => $_params['category'],
-            ":id" => $_params['id']
+            ":id" => $_params['id'],
+            ":existences" => $_params['existences']
         );
         if($ans->execute($data)){
             $tfinish = microtime(true);
@@ -70,7 +72,7 @@ class Articulo{
     public function show(){
         $tinit = microtime(true);
         $msg = "all articles have been required";
-        $query = "SELECT article.id, article.name, description, image, unitPrice, status, categories.name as nameCategory FROM `article` 
+        $query = "SELECT reorder, sold, existences, article.id, article.name, description, image, unitPrice, categories.name as nameCategory FROM `article` 
         INNER JOIN `categories`
         ON article.category = categories.id ORDER BY article.id DESC
         ";
@@ -98,6 +100,14 @@ class Articulo{
             $tfinish = microtime(true);
             logger($msg, $tinit, $tfinish);
             return $ans->fetch();
+        }
+        return false;
+    }
+    public function sales(){
+        $query = "SELECT name, sold from article order by sold desc LIMIT 10";
+        $ans = $this->cn->prepare($query);
+        if($ans->execute()){
+            return $ans->fetchAll();
         }
         return false;
     }

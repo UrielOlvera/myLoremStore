@@ -8,6 +8,7 @@
                 </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="?menu=log">LOG</a></li>
+                    <li><a href="?menu=statistics">Statistics</a></li>
                     <li><a href="?menu=articles">Articles</a></li>
                     <li><a href="?menu=dashboard">Dashboard</a></li>
                     <li><a href="?menu=orders">Orders</a></li>
@@ -31,6 +32,7 @@
                     </ul>
                     <li></li>
                     <li><a href="?menu=log">LOG</a></li>
+                    <li><a href="?menu=statistics">Statistics</a></li>
                     <li><a href="?menu=articles">Articles</a></li>
                     <li><a href="?menu=dashboard">Dashboard</a></li>
                     <li><a href="?menu=orders">Orders</a></li>

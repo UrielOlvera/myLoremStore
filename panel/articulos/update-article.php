@@ -42,10 +42,14 @@ if(isset($_GET['id']) || is_numeric($_GET['id'])){
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="input-field col s12">
+                                    <div class="input-field col s12 m6">
                                         <input value="<?php echo $article_info['unitPrice'] ?>" id="price" name="price" type="text" class="white-text validate" placeholder="$"
                                             required>
                                         <label for="price">Price</label>
+                                    </div>
+                                    <div class="input-filed col s12 m6">
+                                        <input id="existences" name="existences" type="text" class="white-text validate" required>
+                                        <label for="existences">Existences</label>
                                     </div>
                                 </div>
                                 <div class="row">

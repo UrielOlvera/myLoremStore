@@ -50,7 +50,7 @@ class Pedido{
     public function show(){
         $tinit = microtime(true);
         $msg = "all orders have been required";
-        $query = "SELECT o.id, firstName, lastName, email, total, date FROM orders o 
+        $query = "SELECT o.id, firstName, lastName, email, total, date, o.status FROM orders o 
         INNER JOIN customers c ON o.customer = c.id ORDER BY o.id DESC";
         $ans = $this->cn->prepare($query);
         if($ans->execute()){
@@ -106,6 +106,14 @@ class Pedido{
         if($ans->execute()){
             $tfinish = microtime(true);
             logger($msg, $tinit, $tfinish);
+            return $ans->fetchAll();
+        }
+        return false;
+    }
+    public function showSales(){
+        $query = "select sum(total) as total, `date` from orders GROUP BY `date`";
+        $ans = $this->cn->prepare($query);
+        if($ans->execute()){
             return $ans->fetchAll();
         }
         return false;

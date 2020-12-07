@@ -10,12 +10,6 @@ if($_SERVER['REQUEST_METHOD']==='GET'){
 
     $rpt = $articulo -> delete($id);
     if($rpt){
-        $_SESSION['msgLog'] = syslog(LOG_INFO, "Consulta de articulos");
-        ?>
-        <script>
-            console.log(<?php echo $_SESSION['msgLog']; ?>)
-        </script>
-        <?php
         header('Location: ../layout/admin-session-started.php?menu=articles');
     }else{
         echo 'Error al eliminar un articulo';
@@ -25,7 +19,6 @@ if($_SERVER['REQUEST_METHOD']==='GET'){
 if($_SERVER['REQUEST_METHOD']==='POST'){
     //ADD
     if($_POST['action']==='Add'){
-        //$_SESSION['msgLog'] = 'add article';            //mensaje add article para log
         if(empty($_POST['name']))
             exit('Completar Nombre');
 
@@ -44,12 +37,16 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         if(!is_numeric($_POST['category_id']))
             exit('Seleccionar Categoria valida');
 
+        if(!is_numeric($_POST['existences']))
+            exit('Entrada invalida');
+
         $_params = array(
             'name' => $_POST['name'],
             'description' => $_POST['description'],
             'image' => uploadImage(),
             'unitPrice' => $_POST['price'],
             'category' => $_POST['category_id'],
+            'existences' => $_POST['existences']
         );
         $rpt = $articulo -> add($_params);
         if($rpt){
@@ -79,12 +76,16 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         if(!is_numeric($_POST['category_id']))
             exit('Seleccionar Categoria valida');
 
+        if(!is_numeric($_POST['existences']))
+            exit('Entrada invalida');
+            
         $_params = array(
             'name' => $_POST['name'],
             'description' => $_POST['description'],
             'unitPrice' => $_POST['price'],
             'category' => $_POST['category_id'],
-            'id' => $_POST['id']
+            'id' => $_POST['id'],
+            'existences' => $_POST['existences']
         );
 
         if(!empty($_POST['image_temp']))
