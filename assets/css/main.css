@@ -3,7 +3,9 @@ nav{
     padding-right: 2em;
     margin-bottom: 2em;
 }
-
+.img-catalog{
+    max-height: 10em;
+}
 .log-panel{
     background: #212121 ;
     height: 600px;

@@ -56,4 +56,13 @@
         <div class="col m2"></div>
     </div>
 </div>
+<?php
+require_once "../src/log/logger.php";
+$tinit = microtime(true);
+$msg = "a successful payment has been made";
+?>
 <script src="../assets/js/checkout.js"></script>
+<?php
+$tfinish = microtime(true);
+logger($msg, $tinit, $tfinish);
+?>

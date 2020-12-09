@@ -22,7 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems);
-  });
-  var instance = M.Tabs.init(el, {
-      
-  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.tabs');
+    var instance = M.Tabs.init(elems, {
+        //swipeable: true
+    });
+});

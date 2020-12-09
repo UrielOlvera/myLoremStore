@@ -10,6 +10,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
         $customer = new mystore\Cliente;
         $order = new mystore\Pedido;
+        $article = new mystore\Articulo;
         //agregar cliente
         $_params = array(
             'firstName' => $_POST['firstName'],
@@ -39,6 +40,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
                 'quantity' => $value['quantity']
             );
             $order->addDetails($_params);
+            $article->updateSales($_params['article_id'], $_params['quantity']);
         }
         \Stripe\Stripe::setApiKey("sk_test_51HoeWWGg5riqZ4QH22hPGuwHH44LOqHg4xBFydMyqS3UJm50HGqB9ocuGAguA2MHv2QdJtQGhBrPtgROflKSkaIJ00qRr5cz2n");
         $token = $_POST["stripeToken"];

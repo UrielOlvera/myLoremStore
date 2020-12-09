@@ -16,7 +16,7 @@ class Articulo{
     public function add($_params){
         $tinit = microtime(true);
         $msg = "article added to the database";
-        $query = "INSERT INTO `article`(`name`, `description`, `image`, `unitPrice`, `category`,`existences`) VALUES (:name,:description,:image,:unitPrice,:category,:existences)";
+        $query = "INSERT INTO `article`(`name`, `description`, `image`, `unitPrice`, `category`,`existences`,`sold`) VALUES (:name,:description,:image,:unitPrice,:category,:existences, 0)";
         $ans = $this->cn->prepare($query);
         $data = array(
             ":name" => $_params['name'],
@@ -103,8 +103,24 @@ class Articulo{
         }
         return false;
     }
-    public function sales(){
-        $query = "SELECT name, sold from article order by sold desc LIMIT 10";
+    public function updateSales($article_id, $qty){
+        $tinit = microtime(true);
+        $msg = "updated article in the database";
+        $query = "update article set sold = (:qty + sold), existences = (existences - :qty) where id = :article_id";
+        $ans = $this->cn->prepare($query);
+        $data = array(
+            ":article_id" => $article_id,
+            ":qty" => $qty
+        );
+        if($ans->execute($data)){
+            $tfinish = microtime(true);
+            logger($msg, $tinit, $tfinish);
+            return true;
+        }
+        return false;
+    }
+    public function topSales(){
+        $query = "SELECT name, sold from article order by sold desc LIMIT 5";
         $ans = $this->cn->prepare($query);
         if($ans->execute()){
             return $ans->fetchAll();
