@@ -12,8 +12,8 @@ switch ($_GET['menu']) {
     case 'complete-info':
         require_once('../client-view/complete-info.php');
         break;
-    case 'see-article':
-        require_once('../client-view/see-article.php');
+    case 'tenks':
+        require_once('../client-view/tenks.php');
         break;
     default:
         header('Location: ../404.php');

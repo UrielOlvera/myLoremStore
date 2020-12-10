@@ -51,8 +51,14 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
             'description' => $descripcion,
             'source' => $token
         ]);
+        $email_msg = `
+        <div>
+            <h2>Thank you for shopping at myLoremStore</h2>
+        </div>
+        `;
+        mail($_POST['email'], "Successful payment", $email_msg);
         $_SESSION['cart'] = array();
-        header('Location: ../layout/client-view.php?menu=cart');
+        header('Location: ../layout/client-view.php?menu=tenks');
     }
 }
 ?>
