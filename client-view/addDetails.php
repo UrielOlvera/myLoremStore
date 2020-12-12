@@ -5,6 +5,7 @@
 session_start();
 if($_SERVER['REQUEST_METHOD']==='POST'){
     require 'actions.php';
+    require_once "../src/log/logger.php";
     require '../vendor/autoload.php';
 
     if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
@@ -42,6 +43,8 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
             $order->addDetails($_params);
             $article->updateSales($_params['article_id'], $_params['quantity']);
         }
+        $tinit = microtime(true);
+        $msg = "a successful payment has been made";
         \Stripe\Stripe::setApiKey("sk_test_51HoeWWGg5riqZ4QH22hPGuwHH44LOqHg4xBFydMyqS3UJm50HGqB9ocuGAguA2MHv2QdJtQGhBrPtgROflKSkaIJ00qRr5cz2n");
         $token = $_POST["stripeToken"];
         $charge = \Stripe\Charge::create([
@@ -51,12 +54,15 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
             'description' => $descripcion,
             'source' => $token
         ]);
-        $email_msg = `
+        $tfinish = microtime(true);
+        logger($msg, $tinit, $tfinish);
+        /*$email_msg = `
         <div>
             <h2>Thank you for shopping at myLoremStore</h2>
         </div>
         `;
-        mail($_POST['email'], "Successful payment", $email_msg);
+        mail($_POST['email'], "Successful payment", $email_msg);*/
+        //require_once "../client-view/mail.php";
         $_SESSION['cart'] = array();
         header('Location: ../layout/client-view.php?menu=tenks');
     }

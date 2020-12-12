@@ -3,6 +3,7 @@ require '../vendor/autoload.php';
 
 $articulo = new mystore\Articulo;
 $pedido = new mystore\Pedido;
+$totalSales = $pedido->totalSales();
 
 ?>
 
@@ -16,9 +17,11 @@ $pedido = new mystore\Pedido;
                 <li class="tab col s6"><a href="#top">Best selling articles</a></li>
             </ul>
         </div>
-        <div id="totalSales" class="col s12 card-panel">
-            <h3>Total Sales</h3>
-            <div id="totalSalesGraph"></div>
+        <div id="totalSales">
+            <div class="col s12 card-panel">
+                <h3>Total Sales <i class="teal-text">$<?php echo $totalSales[0]; ?></i></h3>
+                <div id="totalSalesGraph"></div>
+            </div>
         </div>
         <div id="top" class="col s12 card-panel">
             <h3>Best selling articles</h3>

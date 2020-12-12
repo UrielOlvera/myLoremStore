@@ -118,5 +118,13 @@ class Pedido{
         }
         return false;
     }
+    public function totalSales(){
+        $query = "select sum(total) from orders";
+        $ans = $this->cn->prepare($query);
+        if($ans->execute()){
+            return $ans->fetch();
+        }
+        return false;
+    }
 }
 ?>

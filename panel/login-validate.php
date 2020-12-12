@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             'name' => $userExist['name'],
             'status' => 1
         );
-        header('Location: ../layout/admin-session-started.php?menu=dashboard');
+        header('Location: ../layout/admin-session-started.php?menu=statistics');
     } else {
         exit(json_encode((array(
             'status' => false,

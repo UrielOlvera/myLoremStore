@@ -10,7 +10,6 @@
                     <li><a href="?menu=log">LOG</a></li>
                     <li><a href="?menu=statistics">Statistics</a></li>
                     <li><a href="?menu=articles">Articles</a></li>
-                    <li><a href="?menu=dashboard">Dashboard</a></li>
                     <li><a href="?menu=orders">Orders</a></li>
                     <li><a href="#" class="dropdown-trigger"
                             data-target='dropdown1'><?php echo $_SESSION['userLogged']['name']; ?><i class="right fas fa-sort-down"></i></a></li>
@@ -34,7 +33,6 @@
                     <li><a href="?menu=log">LOG</a></li>
                     <li><a href="?menu=statistics">Statistics</a></li>
                     <li><a href="?menu=articles">Articles</a></li>
-                    <li><a href="?menu=dashboard">Dashboard</a></li>
                     <li><a href="?menu=orders">Orders</a></li>
                 </ul>
                 <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
