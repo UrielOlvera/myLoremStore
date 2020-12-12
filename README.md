@@ -17,3 +17,5 @@ el usuario y contraseña para loguearse es:
 Si se intenta acceder a un archivo inexistente (que produce error 404) se redireccionara a una pagina _404.php_ donde se encuentra un enlace para ir a _welcome.php_.
 
 El codigo del proyecto puede encontrarse [aqui](https://github.com/UrielOlvera/myLoremStore/).
+
+El proyecto completo puede encontrarse [aqui](https://my-lorem-store.herokuapp.com/).
